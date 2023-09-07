@@ -22,23 +22,3 @@ class MyRequestHandler(http.server.BaseHTTPRequestHandler):
 with socketserver.TCPServer(("", PORT), MyRequestHandler) as httpd:
     print("Server started at localhost:" + str(PORT))
     httpd.serve_forever()
-
-
-
-# from fastapi import FastAPI
-# import uvicorn
-# import random
-#
-# MY_NUM = random.randint(1, 100)
-#
-# app = FastAPI()
-#
-#
-# @app.get('/')
-# async def index():
-#     print(MY_NUM)
-#     return {"message": MY_NUM}
-#
-#
-# if __name__ == '__main__':
-#     uvicorn.run('app:app', host='0.0.0.0', port=5000, reload=True)
